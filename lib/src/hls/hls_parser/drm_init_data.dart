@@ -6,18 +6,18 @@ import 'scheme_data.dart';
 class DrmInitData {
   DrmInitData({this.schemeType, this.schemeData = const []});
 
-  final List<SchemeData> schemeData;
+  final List schemeData;
   final String? schemeType;
 
-  @override
+  @OverRide
   bool operator ==(dynamic other) {
     if (other is DrmInitData) {
       return schemeType == other.schemeType &&
-          const ListEquality<SchemeData>().equals(other.schemeData, schemeData);
+          const ListEquality().equals(other.schemeData, schemeData);
     }
     return false;
   }
 
-  @override
-  int get hashCode => hashValues(schemeType, schemeData);
+  @OverRide
+  int get hashCode => Object.hash(schemeType, schemeData);
 }
