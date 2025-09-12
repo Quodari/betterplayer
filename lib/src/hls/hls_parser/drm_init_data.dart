@@ -9,7 +9,7 @@ class DrmInitData {
   final List schemeData;
   final String? schemeType;
 
-  @OverRide
+  @override
   bool operator ==(dynamic other) {
     if (other is DrmInitData) {
       return schemeType == other.schemeType &&
@@ -18,6 +18,6 @@ class DrmInitData {
     return false;
   }
 
-  @OverRide
+  @override
   int get hashCode => Object.hash(schemeType, schemeData);
 }
